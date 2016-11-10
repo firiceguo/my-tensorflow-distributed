@@ -71,8 +71,8 @@ elif FLAGS.job_name == "worker":
                 avg_cost += cost / n_samples * batch_size
 
                 # Display logs per epoch step
-                if epoch % display_step == 0:
-                    print "Epoch:", '%04d' % (epoch + 1), \
-                        "cost=", "{:.9f}".format(avg_cost)
+            if epoch % display_step == 0:
+                print "Epoch:", '%04d' % (epoch + 1), \
+                    "cost=", "{:.9f}".format(avg_cost)
 
         print "Total cost: " + str(autoencoder.calc_total_cost(X_test, sess))
