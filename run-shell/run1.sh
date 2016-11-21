@@ -17,7 +17,7 @@ collectl -sF -oT > $dir/Nfs0 &
 echo "Running..."
 
 date > $dir/output-0
-python $1 --job_name="ps" --task_index=0 &>> $dir/output-0
+python $1 --job_name="ps" --task_index=0 >> $dir/output-0 &
 python $1 --job_name="worker" --task_index=0 >> $dir/output-0
 date >> $dir/output-0
 
